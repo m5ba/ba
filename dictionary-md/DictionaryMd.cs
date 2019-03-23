@@ -16,9 +16,6 @@ namespace Basicalgorithm.Dictionary
         private int _count;
         private readonly int _size;
         private readonly int _sizeOrigin;
-        //private TKey[] _keys;
-        //private TValue[] _values;
-        //private bool[] _defined;
         public DictionaryMd(int size)
         {
             if (size < 1)
@@ -27,14 +24,10 @@ namespace Basicalgorithm.Dictionary
             _sizeOrigin = size;
 
             _subDict = new DictionaryMd<TKey, TValue>[_size];
-            //_keys = new TKey[_size];
-            //_values = new TValue[_size];
-            //_defined = new bool[_size];
             _count = 0;
             for (int i = 0; i < _size; i++)
             {
                 _subDict[i] = null;
-                //_defined[i] = false;
             }
         }
 
